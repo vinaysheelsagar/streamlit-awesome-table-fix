@@ -1,10 +1,13 @@
 import os
 import pandas as pd
-from pandas.io.json import json_normalize
 import streamlit as st
 from typing import List
 import streamlit.components.v1 as components
 from awesome_table.column import (ColumnDType, Column)
+try:
+    from pandas.io.json import json_normalize
+except ImportError:
+    pass
 
 _RELEASE = True
 
